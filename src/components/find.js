@@ -7,7 +7,13 @@ function Find() {
 
 
     function api() {
-        setData(<Movie name={text.current.value} ></Movie>)
+        if ( text.current.value === "") {
+            return false
+        }
+        else {
+            setData(<Movie name={text.current.value} ></Movie>)
+        }
+        
     }
 
     function InputHandler(event) {
@@ -16,10 +22,16 @@ function Find() {
         }
     }
 
+    const handleKeypress = e => {
+        if (e.key === 'Enter' && text.current.value != '' ) {
+            api();
+        }
+    };
+
 
     return (
         <div>
-            <input ref={text} onChange={InputHandler} />
+            <input ref={text} onChange={InputHandler} onKeyPress={handleKeypress} />
             <button onClick={api} >Search</button>
 
             <div>{data}</div>

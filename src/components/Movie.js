@@ -18,18 +18,23 @@ function Movie(props) {
   }, []); 
 
 
-
-
   if (isLoading) {
     return <section>
       <p>Loading...</p>
     </section>
   }
 
+    if (loadedMeetups.Response === "False") {
+        return (<p>Movie Not Found</p>)
+    }
 
-  return <section>
-    <About name={loadedMeetups.Title} rating={loadedMeetups.imdbRating} year={loadedMeetups.Year} poster={loadedMeetups.Poster} plot={loadedMeetups.Plot} />
-  </section>
+        return <section>
+        
+        <About name={loadedMeetups.Title} rating={loadedMeetups.imdbRating} year={loadedMeetups.Year} poster={loadedMeetups.Poster} plot={loadedMeetups.Plot} genres={loadedMeetups.Genre} />
+    </section>
+
+
+
 }
 
 export default Movie;
