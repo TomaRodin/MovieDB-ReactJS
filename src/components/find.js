@@ -1,5 +1,6 @@
 import { useRef, useState } from "react";
 import Movie from './Movie'
+import './Find.css'
 
 function Find() {
     const [data,setData] = useState();
@@ -23,16 +24,19 @@ function Find() {
     }
 
     const handleKeypress = e => {
-        if (e.key === 'Enter' && text.current.value != '' ) {
+        if (e.key === 'Enter' && text.current.value !== '' ) {
             api();
         }
     };
 
 
     return (
-        <div>
-            <input ref={text} onChange={InputHandler} onKeyPress={handleKeypress} />
-            <button onClick={api} >Search</button>
+        <div className="form" >
+            <div className="demo">
+                <input ref={text} onChange={InputHandler} onKeyPress={handleKeypress} className="searchTerm" placeholder="Search:" />
+                <div onClick={api} className="searchButton" >Search</div>
+            </div>
+            
 
             <div>{data}</div>
 

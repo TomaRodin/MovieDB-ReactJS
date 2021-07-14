@@ -30,7 +30,7 @@ function Movie(props) {
 
         return <section>
         
-        <About name={loadedMeetups.Title} rating={loadedMeetups.imdbRating} year={loadedMeetups.Year} poster={loadedMeetups.Poster} plot={loadedMeetups.Plot} genres={loadedMeetups.Genre} />
+        <About data={loadedMeetups}/>
     </section>
 
 
