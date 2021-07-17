@@ -1,8 +1,10 @@
 .green {
     background-color: green;
     margin-right: 350px;
+    width: 55px;
     text-align: center;
     color: white;
+    margin:auto;
 }
 
 .yellow {
@@ -10,6 +12,8 @@
     margin-right: 350px;
     text-align: center;
     color: white;
+    width: 55px;
+    margin:auto;
 }
 
 .red {
@@ -17,4 +21,6 @@
     margin-right: 350px;
     text-align: center;
     color: white;
+    margin:auto;
+    width: 55px;
 }

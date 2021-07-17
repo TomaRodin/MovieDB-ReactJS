@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import About from './About';
+import './Movie.css'
 
 function Movie(props) {
   const [isLoading, setisLoading] = useState(true);
@@ -20,7 +21,7 @@ function Movie(props) {
 
   if (isLoading) {
     return <section>
-      <p>Loading...</p>
+      <p className="loading">Loading...</p>
     </section>
   }
 

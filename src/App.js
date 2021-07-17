@@ -4,7 +4,7 @@ import Head from './components/Header'
 
 function App() {
   return (
-    <div>
+    <div className="wrapper">
       <Head/>
       <Find/>
     </div>

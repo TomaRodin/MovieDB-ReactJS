@@ -1,0 +1,15 @@
+.plot {
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.released {
+    position: absolute;
+    margin-left:30%;
+    padding: 1em;
+    height: 5%;
+    line-height: 50px;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    background-color: rgb(224, 224, 224) ;
+}
